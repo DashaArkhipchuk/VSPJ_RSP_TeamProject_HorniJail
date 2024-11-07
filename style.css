@@ -1,33 +1,83 @@
 body {
-    background-color: #2B2B2B; 
-    color: #F5F5F5; 
+    background-color: #2B2B2B;
+    color: #F5F5F5;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-
 
 .navbar {
-    
-    border-bottom: 2px solid #f5f5f5; 
+    border-bottom: 2px solid #f5f5f5;
 }
 
-.btn-login {
-    background-color: #D84A4A; 
-    color: white;
-}
 
 .navbar-nav .nav-link:hover {
-    background-color: #D84A4A; 
+    background-color: #D84A4A;
     color: white;
 }
 
-/* Меню с темным фоном */
-.navbar-nav {
+{box-sizing: border-box;}
 
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #D84A4A;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
 }
 
-.navbar-toggler-icon {
-    
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
 
-.navbar-collapse {
-    
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #4A4A4A;
 }
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a #D84A4A background color to the cancel button */
+.form-container .cancel {
+  background-color: #D84A4A;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+} 

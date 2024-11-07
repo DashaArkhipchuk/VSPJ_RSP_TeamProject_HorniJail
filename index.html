@@ -14,13 +14,28 @@
     
             
             <div class="d-flex align-items-center ms-auto">
-                <button class="btn btn-login me-2">Log In</button>
+                <button class="open-button  btn btn-login me-2" id="loginButton" onclick="openForm()">Log in</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-    
-            
+
+            <!-- Login Form -->
+               <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h2>Login</h2>
+
+                <label for="login"><b>Login</b></label>
+                <input type="text" placeholder="Enter Login" name="login" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+            </div> 
+                
             <div class="collapse navbar-collapse" id="navbarContent">
                 <!-- Writter menu -->
             <ul class="navbar-nav ms-auto" id="writerMenu" style="display: none;">
