@@ -92,10 +92,9 @@ body {
 } 
 
 .carousel {
-    height: 90vh;
-    width: 95vw;
-    padding: 2rem ;
-    
+    height: 95vh;
+    width: 90vw;
+    padding: 2rem  0rem 0rem 0rem;    
 }
 
 /* Make sure the images scale properly within the carousel */
@@ -107,4 +106,48 @@ body {
     object-fit: cover; /* Ensures images fill the container while maintaining aspect ratio */
     height: 100%;
     width: 100%;
+}
+
+/* Card Styling */
+.card {
+    background-color: #333; /* Dark background */
+    border: none; /* Remove border */
+    color: #F5F5F5; /* Light text color */
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+/* Card body text styling */
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    color: #F5F5F5;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    color: #F5F5F5;
+    font-size: 1rem;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #D84A4A;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b34040;
+}
+
+/* Optional: Add spacing between cards */
+.row-cols-1 .col {
+    margin-bottom: 30px;
 }
