@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>RSP project VSPJ</title>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Horní jail</a>
     
+            
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-login me-2">Log In</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+    
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Writter menu -->
+            <ul class="navbar-nav ms-auto" id="writerMenu" style="display: none;">
+                <li class="nav-item"><a class="nav-link" href="#">Main page</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Upload article</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Processing review comments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log out</a></li>
+            </ul>
+
+            <!-- Editor menu -->
+            <ul class="navbar-nav ms-auto" id="editorMenu" style="display: none;">
+                <li class="nav-item"><a class="nav-link" href="#">Main page</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Article management</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Assign reviewers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log out</a></li>
+            </ul>
+
+            <!-- Reviewer menu -->
+            <ul class="navbar-nav ms-auto" id="chiefReviewerMenu" style="display: none;">
+                <li class="nav-item"><a class="nav-link" href="#">Main page</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Assigned Article</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log out</a></li>
+            </ul>
+
+            <!-- Aministrator menu -->
+            <ul class="navbar-nav ms-auto" id="adminMenu" style="display: none;">
+                    <li class="nav-item"><a class="nav-link" href="#">Main page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">User management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help desk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
