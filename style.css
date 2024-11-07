@@ -79,7 +79,6 @@ body {
   opacity: 0.8;
 }
 
-/* Add a #D84A4A background color to the cancel button */
 .form-container .cancel {
   background-color: #D84A4A;
 }
@@ -96,13 +95,13 @@ body {
     padding: 2rem 0rem 0rem 0rem;
 }
 
-/* Make sure the images scale properly within the carousel */
+
 .carousel-inner {
     height: 100%;
 }
 
 .carousel-item img {
-    object-fit: cover; /* Ensures images fill the container while maintaining aspect ratio */
+    object-fit: cover; 
     height: 100%;
     width: 100%;
 }
@@ -119,13 +118,14 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adding some shadow to the text for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
+
 /* Card Styling */
 .card {
-    background-color: #333; /* Dark background */
-    border: none; /* Remove border */
-    color: #F5F5F5; /* Light text color */
+    background-color: #333; 
+    border: none; 
+    color: #F5F5F5; 
 }
 
 .card-img-top {
@@ -160,7 +160,22 @@ body {
     background-color: #b34040;
 }
 
-/* Optional: Add spacing between cards */
 .row-cols-1 .col {
     margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; 
+    margin-top: 40px;
+}
+
+.footer-content h2 {
+    color: #f5f5f5;
+    font-size: 2rem;
+    margin: 0;
 }
