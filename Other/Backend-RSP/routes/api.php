@@ -8,7 +8,6 @@ $db = $database->getConnection();
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-//echo $uri;
 $path = explode('/', trim($uri, '/'));
 
 
@@ -26,6 +25,6 @@ switch ($path[0]) {
     // Add more cases for other resources like 'articles', 'editions', etc.
     default:
         header("HTTP/1.1 405 Not Found");
-        echo json_encode(["message" => "Resource not found"]);
+        echo json_encode(["message" => $path[0] . " not found."]);
         break;
 }

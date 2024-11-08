@@ -114,6 +114,7 @@ body {
 /* Positioning the text at the bottom left */
 .carousel-caption {
     position: absolute;
+    z-index: 3;
     bottom: 15rem;
     color: white;
     font-size: 1.5rem;
