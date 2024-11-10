@@ -16,8 +16,8 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-dark p-4">
                     <h5 class="nav-item"><a class="nav-link" href="index.html">Main page</a></h5>
-                    <h5 class="nav-item"><a class="nav-link" href="#">Article management</a></h5>
-                    <h5 class="nav-item"><a class="nav-link" href="#">Assign reviewers</a></h5>
+                    <h5 class="nav-item"><a class="nav-link" href="#">Assigned Article</a></h5>
+                    <h5 class="nav-item"><a class="nav-link" href="#">Notifications</a></h5>
                     <h5 class="nav-item"><a class="nav-link" href="#">Log out</a></h5>
                 </div>
               </div>
@@ -47,15 +47,16 @@
             </div>   
 
             <p style="margin-top: 1rem; margin-bottom: 1rem;">
-                <button class="btn btn-primary" type="button" onclick="toggleCollapse('TakingOver', this)">Taking over articles</button>
+                <button class="btn btn-primary" type="button" onclick="toggleCollapse('TakingOver', this)">Creation of a review report</button>
             </p>
               <div class="row" style="margin-bottom: 1rem;">
                 <div class="col">
                   <div class="collapse multi-collapse" id="TakingOver" style="width: 80vw; padding-left: 2rem;">
                     <div class="card card-body d-flex justify-content-center align-items-center">
-                      Do you want to take over the article?
-                      <div class="d-flex" style="padding-top: 1rem;">
-                        <button type="button" class="btn btn-primary me-2">Submit</button>                        
+                      Please write a review below:
+                      <div class="d-flex flex-column form-grou" style="padding-top: 1rem;">
+                        <textarea class="form-control m-2" rows="5" id="comment" style="width: 65vw;"></textarea>
+                        <button type="button" class="btn btn-primary m-2" style="width: 18vw; align-self: center;">Submit</button>                        
                       </div> 
                     </div>
                   </div>
