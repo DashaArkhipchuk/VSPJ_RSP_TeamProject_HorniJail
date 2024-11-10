@@ -29,7 +29,7 @@ fetch(apiUrl)
     })
     .catch(error => console.error('Error fetching data:', error));
 
-const carouselApiUrl = '../Backend-RSP/articles';
+const carouselApiUrl = 'https://backend-rsp/articles';
 
 const articleIds = [1, 2, 3]; // Example IDs for articles
 
