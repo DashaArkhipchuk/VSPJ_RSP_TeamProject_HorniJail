@@ -1,5 +1,5 @@
-
 const apiUrl = 'https://backend-rsp/articles?status=1&page=1&limit=6';
+
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -29,7 +29,7 @@ fetch(apiUrl)
     })
     .catch(error => console.error('Error fetching data:', error));
 
-const carouselApiUrl = 'https://backend-rsp/articles';
+const carouselApiUrl = '../Backend-RSP/articles';
 
 const articleIds = [1, 2, 3]; // Example IDs for articles
 
