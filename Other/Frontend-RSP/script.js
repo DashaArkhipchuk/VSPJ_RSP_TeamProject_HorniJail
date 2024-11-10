@@ -1,27 +1,39 @@
-function showMenu(role) {
-
-    document.getElementById('writerMenu').style.display = 'none';
-    document.getElementById('editorMenu').style.display = 'none';
-    document.getElementById('reviewerMenu').style.display = 'none';
-    document.getElementById('adminMenu').style.display = 'none';
-
-    if (role === 'writer') {
-        document.getElementById('writerMenu').style.display = 'flex';
-    } else if (role === 'editor') {
-        document.getElementById('editorMenu').style.display = 'flex';
-    } else if (role === 'reviewer') {
-        document.getElementById('reviewerMenu').style.display = 'flex';
-    } else if (role === 'admin') {
-        document.getElementById('adminMenu').style.display = 'flex';
-    }
-}
-
 function openForm() {
-    document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm").style.display = "none";
+}
+
+function validateLogin() {
+  // Get the values from the form
+  var login = document.getElementById("login").value;
+  var password = document.getElementById("psw").value;
+
+  // Define valid credentials for each role
+  var users = {
+      "editor": { login: "editor", password: "editorpass", redirect: "editor-main.html" },
+      "writer": { login: "writer", password: "writerpass", redirect: "writer-main.html" },
+      "admin": { login: "admin", password: "adminpass", redirect: "admin-main.html" },
+      "reviewer": { login: "reviewer", password: "reviewerpass", redirect: "reviewer-main.html" }
+  };
+
+  // Check if the login and password match any of the users
+  for (var role in users) {
+      if (users[role].login === login && users[role].password === password) {
+          window.location.href = users[role].redirect; // Redirect to the corresponding page
+          return;
+      }
+  }
+
+  // If no match is found, alert the user
+  alert("Invalid login or password");
+}
+
+function logout() {
+  // Optionally, clear any session storage or cookies if necessary
+  window.location.href = "index.html"; // Redirect to the main page (index.html)
 }
 
 function toggleCollapse(elementId, button) {
