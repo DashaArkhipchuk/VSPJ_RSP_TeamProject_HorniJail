@@ -24,5 +24,28 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-
+function toggleCollapse(elementId, button) {
+    const collapseElements = document.querySelectorAll('.multi-collapse');
+    
+    
+    collapseElements.forEach(el => {
+      if (el.id !== elementId) {
+        const collapseInstance = new bootstrap.Collapse(el, {
+          toggle: false
+        });
+        collapseInstance.hide();
+      }
+    });
+  
+    
+    const selectedElement = document.getElementById(elementId);
+    const rect = button.getBoundingClientRect(); 
+    selectedElement.style.top = `${rect.bottom + window.scrollY}px`; 
+  
+    const selectedInstance = new bootstrap.Collapse(selectedElement, {
+      toggle: false
+    });
+    selectedInstance.toggle();
+  }
+  
 
