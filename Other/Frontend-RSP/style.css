@@ -195,3 +195,20 @@ body {
   max-width: 75vw; 
   margin-top: 0.5rem; 
 }
+
+.text {
+    background-color: #333;
+    padding: 20px;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; 
+    margin-top: 40px;
+}
+
+.text h2 {
+    color: #f5f5f5;
+    font-size: 2rem;
+    margin: 0;
+}
