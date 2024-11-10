@@ -25,6 +25,6 @@ switch ($path[0]) {
     // Add more cases for other resources like 'articles', 'editions', etc.
     default:
         header("HTTP/1.1 405 Not Found");
-        echo json_encode(["message" => $path[0] . " not found."]);
+        echo json_encode(["message" => "Resource not found"]);
         break;
 }
