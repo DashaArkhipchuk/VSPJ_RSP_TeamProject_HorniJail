@@ -1,5 +1,5 @@
 
-const apiUrl = 'https://backend-rsp/articles?status=1';
+const apiUrl = 'https://backend-rsp/articles?status=1&page=1&limit=6';
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -7,13 +7,14 @@ fetch(apiUrl)
         const container = document.getElementById('articles-container');
 
         data.forEach(article => {
+            let updatedPictureURL = article.pictureUrl.replace('../Graphics', '../../Graphics');
             const cardHTML = `
                 <div class="col">
                     <div class="card" style="width: 100%; background-color: #333; border: none;">
-                        <img class="card-img-top" src="../../Graphics/pics/cell-and-molecular-biology.png" alt="${article.Name}" style="width: 100%; height: 200px; object-fit: cover;">
+                        <img class="card-img-top" src="${updatedPictureURL}" alt="${article.name}" style="width: 100%; height: 200px; object-fit: cover;">
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #F5F5F5;">${article.Name}</h4>
-                            <p class="card-text" style="color: #F5F5F5;">${article.SubmissionDate}</p>
+                            <h4 class="card-title" style="color: #F5F5F5;">${article.name}</h4>
+                            <p class="card-text" style="color: #F5F5F5;">${article.description}</p>
                             <div class="text-center mt-auto">
                                 <a href="#" class="btn btn-primary">Read more</a>
                             </div>
@@ -62,13 +63,13 @@ Promise.all(articleIds.map(id =>
         }
 
         const image = document.createElement('img');
-        image.src = "../../Graphics/pics/cell-and-molecular-biology.png";
+        image.src = article.article_picture.replace('../Graphics', '../../Graphics');
         image.alt = article.author_name;
         image.classList.add('d-block', 'w-100');
 
         const caption = document.createElement('div');
         caption.classList.add('carousel-caption', 'd-none', 'd-md-block');
-        caption.style.bottom = '7rem';
+        caption.style.bottom = '17rem';
 
         const title = document.createElement('h5');
         title.innerText = article.author_name;

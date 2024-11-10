@@ -81,8 +81,17 @@ class ArticleController
             $stmt->execute();
             $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            $articlesFormatted = array_map(function($article) {
+                return [
+                    'name' => $article['Name'],
+                    'description' => $article['Description'],
+                    'pictureUrl' => $article['PictureURL']
+                ];
+            }, $articles);
+            
+
             $response['status_code_header'] = 'HTTP/1.1 200 OK';
-            $response['body'] = $articles;
+            $response['body'] = $articlesFormatted;
             return $response;
         } catch (PDOException $e) {
             $response['status_code_header'] = 'HTTP/1.1 500 Internal Server Error';

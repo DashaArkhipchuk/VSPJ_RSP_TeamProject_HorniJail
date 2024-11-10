@@ -10,39 +10,23 @@ class Article
     public $publicationStatus;
     public $editionId;
     public $authorId;
+    public $description;
+    public $pictureUrl;
 
     public function __construct($db)
     {
         $this->conn = $db;
     }
 
-    // Get all articles
-    public function readAll()
-    {
-        $query = "SELECT * FROM " . $this->table_name;
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-
     // Get a single article by ID
-    public function readById($id)
-    {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE Id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $id);
-        $stmt->execute();
-
-        $article = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $article ? $article : null;
-    }
-
     public function fetchArticleWithDetails($articleId)
     {
         $query = "
             SELECT 
                 a.Id AS article_id,
                 a.Name AS article_name,
+                a.Description AS article_description,
+                a.PictureURL AS article_picture,
                 a.PublicationStatus AS article_publication_status,
                 av.VersionNumber AS version_number,
                 ed.Title AS edition_title,
