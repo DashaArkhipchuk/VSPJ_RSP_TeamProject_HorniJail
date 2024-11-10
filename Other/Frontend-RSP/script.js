@@ -7,11 +7,9 @@ function closeForm() {
 }
 
 function validateLogin() {
-  // Get the values from the form
   var login = document.getElementById("login").value;
   var password = document.getElementById("psw").value;
 
-  // Define valid credentials for each role
   var users = {
       "editor": { login: "editor", password: "editorpass", redirect: "editor-main.html" },
       "writer": { login: "writer", password: "writerpass", redirect: "writer-main.html" },
@@ -19,21 +17,17 @@ function validateLogin() {
       "reviewer": { login: "reviewer", password: "reviewerpass", redirect: "reviewer-main.html" }
   };
 
-  // Check if the login and password match any of the users
   for (var role in users) {
       if (users[role].login === login && users[role].password === password) {
-          window.location.href = users[role].redirect; // Redirect to the corresponding page
+          window.location.href = users[role].redirect; 
           return;
       }
   }
-
-  // If no match is found, alert the user
   alert("Invalid login or password");
 }
 
 function logout() {
-  // Optionally, clear any session storage or cookies if necessary
-  window.location.href = "index.html"; // Redirect to the main page (index.html)
+  window.location.href = "index.html"; 
 }
 
 function toggleCollapse(elementId, button) {
