@@ -1,14 +1,13 @@
 <?php
-
-header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PATCH, PUT');
-
-header("Access-Control-Allow-Headers: X-Requested-With");
-
 require 'config/Database.php';
 require 'controllers/UserController.php';
 require 'controllers/ArticleController.php';
+require 'controllers/ProtectedController.php';
+
+// Allow CORS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $database = new Database();
 $db = $database->getConnection();
@@ -28,6 +27,15 @@ switch ($path[0]) {
         $controller = new ArticleController($db, $requestMethod, $articleId);
         $controller->processRequest();
         break;
+    case 'authenticate':
+        $controller = new UserController($db, $requestMethod);
+        $controller->authenticate();
+        break;
+    case 'protected':
+        $controller = new ProtectedController($db, $requestMethod);
+        $controller->processRequest();
+        break;
+
 
     // Add more cases for other resources like 'articles', 'editions', etc.
     default:
