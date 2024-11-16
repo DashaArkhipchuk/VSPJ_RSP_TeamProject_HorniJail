@@ -84,3 +84,4 @@ Promise.all(articleIds.map(id =>
         carouselInner.appendChild(carouselItem);
     });
 }).catch(error => console.error('Error fetching articles:', error));
+
