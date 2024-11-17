@@ -23,6 +23,10 @@ body {
     color: white;
 }
 
+.navbar-dark{
+    border-bottom: none;
+}
+
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
     background-color: #D84A4A;
