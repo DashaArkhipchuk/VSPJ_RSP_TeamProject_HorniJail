@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Other/Frontend-RSP/style.css">
+    <title>RSP project VSPJ</title>
+</head>
+<body style="background-color: #2B2B2B;">
+    <nav class="navbar navbar-dark bg-dark" style="border-bottom: 2px solid #f5f5f5;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Horní jail</a>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h5 class="nav-item"><a class="nav-link text-white" href="./Other/Frontend-RSP/writer-main.html">Main page</a></h5>
+                    <h5 class="nav-item"><a class="nav-link text-white" href="upload-article.html">Upload article</a></h5>
+                    <h5 class="nav-item"><a class="nav-link text-white" href="show-review.html">Show review comments</a></h5>
+                    <h5 class="nav-item"><a class="nav-link text-white" href="#" onclick="logout()">Log out</a></h5>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="main-content py-4" >
+          
+        <!-- Image Section -->
+        <div class="d-flex justify-content-center">
+            <img src="https://images.unsplash.com/photo-1602212096437-d0af1ce0553e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" style="width: 75vw; height: 20vh; object-fit: cover; border-radius: 0.5rem;">
+        </div>
+
+        <!-- Review Section -->
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="p-4" style="background-color: #2f2f2f; border-radius: 0.5rem; width: 75%; color: #d3d3d3;">
+        <!-- Title Section -->
+        <h3 class="text-center mb-4" style="color: #d3d3d3;">Review #XXX for the Article: "UUU"</h3>
+
+        <!-- Article Content Section -->
+        <div class="text-content mb-4">
+            <p style="line-height: 1.6;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+
+        <!-- Review Details Section -->
+        <div class="review-details">
+            <p><strong>Relevance Score:</strong> 85/100</p>
+            <p><strong>Originality Score:</strong> 90/100</p>
+            <p><strong>Scientific Score:</strong> 88/100</p>
+            <p><strong>Style Score:</strong> 92/100</p>
+            <p><strong>Reviewer Comment:</strong> The article is well-written and provides significant contributions to the field. Minor adjustments in formatting would improve readability.</p>
+            <p><strong>Review Date:</strong> 2024-12-13</p>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer bg-dark text-center text-white w-75">
+        <p>School project VSPJ Jihlava</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
